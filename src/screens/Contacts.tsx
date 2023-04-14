@@ -42,10 +42,16 @@ const Contacts: React.FC<Props> = ({ contacts, removeContact }) => {
                 <h3>{contact.phoneNumber}</h3>
               </div>
               <div className="flex justify-end card-buttons gap-x-2">
-                <div onClick={() => navigate(`/edit/${contact.phoneNumber}`)}>
+                <div
+                  onClick={() => navigate(`/edit/${contact.phoneNumber}`)}
+                  className="px-2 py-1 text-sm text-black bg-green-300 rounded-md cursor-pointer"
+                >
                   Edit
                 </div>
-                <div onClick={() => removeContact(contact.phoneNumber)}>
+                <div
+                  onClick={() => removeContact(contact.phoneNumber)}
+                  className="px-2 py-1 text-sm text-black bg-red-300 rounded-md cursor-pointer"
+                >
                   Delete
                 </div>
               </div>
